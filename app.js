@@ -34,20 +34,14 @@ board.addEventListener("click", (e) => {
     sound.play();
     points++;
 
-    changeSkullDirection(parseInt(el.style.left, 10), parseInt(el.style.top, 10));
+    changeSkullDirection(
+      parseInt(el.style.left, 10),
+      parseInt(el.style.top, 10)
+    );
 
     el.remove();
     createRandomCircle();
   }
-
-  // Код для Виктора :).
-  else if (el.classList.contains("board")) {
-    if (board.querySelector(".circle")) {
-      board.querySelector(".circle").remove();
-    }
-    createRandomCircle();
-  }
-  // Конец кода для Виктора :).
 });
 
 startBtn.addEventListener("click", (e) => {
@@ -63,6 +57,7 @@ timeList.addEventListener("click", (e) => {
     startGame();
   }
 });
+
 
 let timer;
 let beginTime;
@@ -81,14 +76,14 @@ function startGame() {
             src="https://brainfixer-hobby.github.io/SandBoxesSnippets/skull.png"
             alt=""
           />
-        </div>`;
+        </div>`
   skull = document.querySelector("#skull");
   skull.addEventListener("mouseenter", () => {
     sound3.play();
     points = 0;
-    // skullSpeedX *= -1.1;
-    // skullSpeedY *= -1.1;
-    // mirrorSkull();
+    skullSpeedX *= -1.1;
+    skullSpeedY *= -1.1;
+    mirrorSkull();
   });
   showTime();
   timer = setInterval(decreaseTime, 1000);
@@ -98,6 +93,7 @@ function startGame() {
   music.playbackRate = ((beginTime - time) / beginTime) * 2 + 1;
   music.play();
   skull.style.transform = "scale(-1, 1)";
+
 }
 
 function finishGame() {
@@ -119,9 +115,11 @@ function decreaseTime() {
     time--;
     showTime();
     music.playbackRate = ((beginTime - time) / beginTime) * 2 + 1;
-    skullSpeedX = Math.sign(skullSpeedX) * (((beginTime - time) / beginTime) * 5 + 5);
+    skullSpeedX =
+      Math.sign(skullSpeedX) * (((beginTime - time) / beginTime) * 5 + 5);
     console.log(skullSpeedX);
-    skullSpeedY = Math.sign(skullSpeedY) * (((beginTime - time) / beginTime) * 5 + 5);
+    skullSpeedY =
+      Math.sign(skullSpeedY) * (((beginTime - time) / beginTime) * 5 + 5);
   }
 }
 
