@@ -23,10 +23,10 @@ let sound = new Audio();
 let sound2 = new Audio();
 let sound3 = new Audio();
 
-music.src = "https://brainfixer.github.io/CodePenSnippets/music.mp3";
-sound.src = "https://brainfixer.github.io/CodePenSnippets/sound.mp3";
-sound2.src = "https://brainfixer.github.io/CodePenSnippets/sound2.mp3";
-sound3.src = "https://brainfixer.github.io/CodePenSnippets/sound3.mp3";
+music.src = "https://brainfixer-hobby.github.io/SandBoxesSnippets/music.mp3";
+sound.src = "https://brainfixer-hobby.github.io/SandBoxesSnippets/sound.mp3";
+sound2.src = "https://brainfixer-hobby.github.io/SandBoxesSnippets/sound2.mp3";
+sound3.src = "https://brainfixer-hobby.github.io/SandBoxesSnippets/sound3.mp3";
 
 board.addEventListener("click", (e) => {
   const el = e.target;
