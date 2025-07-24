@@ -78,7 +78,7 @@ function startGame() {
   skullSpeedY = 5;
   board.innerHTML = `<div class="skull" id="skull">
           <img
-            src="https://brainfixer.github.io/CodePenSnippets/skull.png"
+            src="https://brainfixer-hobby.github.io/SandBoxesSnippets/skull.png"
             alt=""
           />
         </div>`;
